@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using BE;
 using DS;
@@ -81,6 +81,8 @@ namespace DAL
                 throw new Exception("DAL: Hosting Unit with this key not found!");
             DataSource.orderList.Add(order);
         }
+     
+
         public bool UpdateOrder(Order order)
         {
             int index = DataSource.orderList.FindIndex(t => t.OrderKey == order.OrderKey);
@@ -280,6 +282,11 @@ namespace DAL
         }
 
         public IEnumerable<HostingUnit> GetHostingUnitList()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Order> GetOrderList()
         {
             throw new NotImplementedException();
         }
