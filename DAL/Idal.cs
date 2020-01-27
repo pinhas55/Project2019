@@ -108,10 +108,12 @@ namespace DAL
         /// <param name="predicat"></param>
         /// <returns></returns>
         IEnumerable<Order> GetOrderList(Func<Order, bool> predicat = null);
+        IEnumerable<Order> GetOrderList();
+
         #endregion
 
         #region Help Fonctions
-        
+
 
         /// <summary>
         /// 
@@ -150,3 +152,4 @@ namespace DAL
         #endregion
     }
 }
+
